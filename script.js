@@ -229,7 +229,7 @@ yearsUntilRetirement('mary', 1948);
 
 */
 
-
+/*
 ////////////////////////////////////
 ////statements and expressions/////
 //////////////////////////////////
@@ -251,4 +251,100 @@ var x = 3;
 //statements
 if (x === 5){
 	//do something
-}s
+}
+ */
+
+/*
+////////////////
+////Arrays/////
+//////////////
+
+
+var names = ['john', 'jane', 'mark'];
+var years = new Array(1990, 1969, 1948);
+
+console.log(names[0]);
+names[1] = 'ben';
+console.log(names);
+
+
+var john = ['john', 'smith', 1990, 'teacher', false];
+john.push('blue');
+john.unshift('Mr.');
+john.pop();
+john.shift();
+console.log(john);
+
+if(john.indexOf('teacher') === -1){
+	console.log('john is NOT a teacher');
+}
+*/
+
+/*
+
+/////////////////
+////Objects/////
+///////////////
+
+
+var john = {
+	name: 'john', 
+	lastName: 'smith',
+	yearOfBirth: 1990,
+	job: 'teacher',
+	isMarried: false
+};
+
+console.log(john.lastName);
+console.log(john['lastName']);
+
+
+var xyz = 'job';
+console.log(john[xyz]);
+
+john.lastName = 'Miller';
+john['john'] =  'programmer';
+
+console.log(john);
+
+var jane = new Object();
+jane.name = 'jane';
+jane.lastName = 'smith';
+jane['yearOfBirth'] = 1969;
+jane['job'] = 'retired';
+jane['isMarried'] = true;
+
+console.log(jane);
+
+
+*/
+
+
+
+
+/////////////////////////////
+////Objects and methods/////
+///////////////////////////
+
+
+var john = {
+	name: 'john',
+	lastName: 'smith',
+	yearOfBirth: 1990,
+	job: 'teacher',
+	isMarried: false,
+	family: ['jane', 'mark', 'bob'] ,
+	calculateAge: function(){
+		return 2016 - this.yearOfBirth;
+
+	}
+};
+
+//console.log(john.calculateAge(1970));
+console.log(john.calculateAge());
+
+var age = john.calculateAge();
+john.age = age;
+
+console.log(john);
+
