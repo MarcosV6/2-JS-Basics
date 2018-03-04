@@ -326,7 +326,8 @@ console.log(jane);
 ////Objects and methods/////
 ///////////////////////////
 
-
+//v1.0
+/*
 var john = {
 	name: 'john',
 	lastName: 'smith',
@@ -340,11 +341,47 @@ var john = {
 	}
 };
 
+*/
+
 //console.log(john.calculateAge(1970));
-console.log(john.calculateAge());
+//console.log(john.calculateAge());
 
-var age = john.calculateAge();
-john.age = age;
+//var age = john.calculateAge();
+//john.age = age;
 
+//console.log(john);
+
+// v2.0
+var john = {
+	name: 'john',
+	lastName: 'smith',
+	yearOfBirth: 1990,
+	job: 'teacher',
+	isMarried: false,
+	family: ['jane', 'mark', 'bob'] ,
+	calculateAge: function(){
+		
+		this.age = 2016 - this.yearOfBirth;
+
+	}
+}; 
+
+john.calculateAge();
 console.log(john);
 
+
+
+
+
+var mike = {
+	
+	yearOfBirth: 1990,
+	calculateAge: function(){
+		
+		this.age = 2016 - this.yearOfBirth;
+
+	}
+}; 
+
+mike.calculateAge();
+console.log(john);
